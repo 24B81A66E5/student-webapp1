@@ -1,3 +1,3 @@
 FROM tomcat:9
-# The asterisk (*) is the magic fix. It finds ANY .war file in target/
+RUN rm -rf /usr/local/tomcat/webapps/*
 COPY target/*.war /usr/local/tomcat/webapps/ROOT.war
